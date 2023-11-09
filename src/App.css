@@ -1,0 +1,115 @@
+.App {
+  top: 0;
+}
+
+/* ### Start of navigation bar code */
+ul {
+  display: flex;
+  font-size: 150%;
+  color: rgb(228, 228, 228);
+  /* background-color: rgba(25,29,38,255); */
+  background-color: rgba(25,29,38,255);
+  padding-top: 50px;
+  margin-top: -30px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+#namePlace {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+#type {
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 80%;
+}
+
+#contents {
+  text-align: right;
+  font-size: 80%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.links {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  text-decoration: underline;
+  color: #661b1c;
+}
+
+/* ### End of the navigation bar */
+/* ### Start of profile background */
+
+.profileBackground {
+  display: flex;
+}
+
+.backgroundHalf {
+  width: 50%;
+  height: 80vh;
+  background-color: #12151c;
+}
+
+.backgroundHalf2 {
+  width: 50%;
+  height: 80vh;
+  background-color: #1b222c;
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: -35%;
+}
+
+.meBox {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Change to relative position */
+  z-index: 2; /* Ensure the z-index is higher than the backgrounds */
+  background-color:  rgba(25,29,38,255);
+  color: white;
+  font-size: 130%;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#meIcon {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+#namePlace2 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+#redLine {
+  margin-top: 20px;
+  height: 5px;
+  width: 80px;
+  background-color: #661b1c;
+}
+
+.profileStuff {
+  margin-top: 20px;
+}
