@@ -71,11 +71,17 @@ ul {
   background-color: #1b222c;
 }
 
+.buttonLine {
+  display: flex;
+}
+
 .aboutMe {
+  margin-left: 130px;
   display: flex;
   justify-content: center;
   position: relative;
   margin-top: -35%;
+  align-items: center;
 }
 
 .meBox {
@@ -86,7 +92,10 @@ ul {
   background-color:  rgba(25,29,38,255);
   color: white;
   font-size: 130%;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -98,6 +107,18 @@ ul {
   height: 150px;
 }
 
+.icons {
+  margin-top: 20px;
+  padding-left: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.sideText {
+  color: white;
+  margin-left: 30px;
+}
+
 #namePlace2 {
   margin-top: 50px;
   font-weight: bold;
@@ -105,11 +126,40 @@ ul {
 
 #redLine {
   margin-top: 20px;
-  height: 5px;
-  width: 80px;
+  height: 3px;
+  width: 150px;
   background-color: #661b1c;
 }
 
 .profileStuff {
   margin-top: 20px;
 }
+
+.description {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 130%;
+  width: 300px;
+}
+/* #### Animation goes here */
+
+.animated-button {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  background-color: none;
+  color: white;
+  background-color: #661b1c;
+  border-radius: 30px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-size: 110%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.animated-button.hovered {
+  transform: scale(1.1);
+  background-color: #12151c;
+}
+
