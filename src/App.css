@@ -3,6 +3,7 @@
 }
 
 /* ####################################### Start of navigation bar code */
+
 ul {
   display: flex;
   font-size: 150%;
@@ -41,16 +42,36 @@ ul {
 }
 
 .links {
+  display: inline-block;
+  position: relative;
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
   color: white;
 }
 
-.links:hover {
+.links:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #661b1c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.links:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* .links:hover {
   text-decoration: underline;
   color: #661b1c;
-}
+} */
 
 /* ####################################### End of the navigation bar */
 /* ####################################### Start of profile background */
@@ -152,6 +173,20 @@ ul {
   width: 300px;
 }
 
+.container {
+  display: flex;
+}
+
+.leftLine {
+  margin-top: 5%;
+  border-left: #661b1c solid 5px;
+  width: 300px;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
 /* ######################################## Animation goes here */
 
 .animated-button {
@@ -200,6 +235,7 @@ ul {
   width: 70%;
   word-spacing: 2px;
 }
+
 /* ####################################### End of first block*/
 /* ####################################### Start of the footer*/
 
