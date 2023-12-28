@@ -10,32 +10,58 @@ import pfp from './images/pfp.jpg';
 
 // ### Important imports
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // ### Important functions
 
 function App() {
+
+  // #### Important variables
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
 
+
+  // #### For scrolling
+  const [showTitle, setTitle] = useState(false);
+  // const [height, setHeight] = useState(0)
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () =>
+      window.removeEventListener("scroll", listenToScroll);
+  }, [])
+
+  const listenToScroll = () => { // does 
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    // setHeight(winScroll);
+    if (winScroll > 100 && !showTitle) {
+      setTitle(true);
+    }
+  };
+
+
+  // #### Website code
   return (
     <div className="App">
-
       {/* ### THIS IS MY NAVIGATION BAR ------------------------ */}
-      <ul id="navigationBar">
-        <img src={joker} className='icon' />
-        <span id="namePlace"><b>RJ Paraiso</b></span>
-        <span id="type"> /&nbsp;&nbsp; Programmer /&nbsp;&nbsp; Front-end Developer</span>
 
-        <div id='contents'>
-          <span id="moreContents">
-            <a href="" className='links'>About Me</a>
-            <a href="https://github.com/thisIs-RJP/" className='links'>GitHub</a>
-            <a href="" className='links'>CV</a>
-          </span>
-        </div>
-      </ul>
+      <div className='fixedWrapper'>
+        <ul id="navigationBar">
+          <img src={joker} className='icon' />
+          <span id="namePlace"><b>RJ Paraiso</b></span>
+          <span id="type"> /&nbsp;&nbsp; Programmer /&nbsp;&nbsp; Front-end Developer</span>
+
+          <div id='contents'>
+            <span id="moreContents">
+              <a href="" className='links'>About Me</a>
+              <a href="https://github.com/thisIs-RJP/" className='links'>GitHub</a>
+              <a href="" className='links'>CV</a>
+            </span>
+          </div>
+        </ul>
+      </div>
+
       {/* ### THIS IS THE END OF MY NAVIGATION BAR ------------------------ */}
 
       <div id="profileProfile">
@@ -48,6 +74,9 @@ function App() {
 
         {/* #### This is the Middle Box */}
         <div className='aboutMe'>
+          {/* <div className='sideName'>
+              RJ Paraiso
+            </div> */}
           <div className='meBox'>
             <img src={pfp} id="meIcon" />
             <span id='namePlace2'>RJ Paraiso</span>
@@ -88,7 +117,6 @@ function App() {
                 >
                   My CV
                 </button>
-                {/* <a href=".files/CV_RJ_Paraiso.pdf">My CV</a> */}
               </div>
 
               <div className='cvButton'>
@@ -99,7 +127,6 @@ function App() {
                 >
                   Websites
                 </button>
-                {/* <a href=".files/CV_RJ_Paraiso.pdf">My CV</a> */}
               </div>
 
               <div className='cvButton'>
@@ -112,45 +139,64 @@ function App() {
                     Projects
                   </button>
                 </a>
-                {/* <a href=".files/CV_RJ_Paraiso.pdf">My CV</a> */}
               </div>
             </div>
 
             <div className='description'>
-              Hi!<br></br> My name is RJ.<br></br>
-              {/* <div className='container'> */}
+              {/* Hi!<br></br> My name is RJ.<br></br> */}
               <div className='leftLine'>
                 Welcome to my website. Please use the elements
                 provided to navigate through it.
                 <br></br>
 
               </div>
-              {/* </div> */}
-
-              {/* I am a Computer Science student currently in my 2nd year. */}
-
-              {/* "Lorem ipsum dolor sit amet, consectetur adipiscing elit, */}
-              {/* sed do eiusmod tempor incididunt ut labore et dolore magna */}
             </div>
           </div>
         </div>
       </div>
       {/* #### This is the end of the Middle Box */}
+
+      <div className='buffer1'></div>
       {/* #### This is the start of the first block  */}
+      <div className='backGroundBlock1'>
+        <div className='block1'>
 
-      {/* <div id="block1">
-        <div id="block1Column">
-          <div className='title'>
-            <i>About Me</i>
-          </div>
+          {showTitle
+            &&
+            <div className='containerTitle'>
+              <div className='title'>
+                <div className='rotateTitle'>
+                  ABOUT
+                </div>
+                <div className='rotateTitle'>
+                  ME
+                </div>
+              </div>
 
-          <div className='descUnderTitle'>
-            <b>Studying at:</b> Dublin City University<br></br><br></br>
-            <b>From</b>: Philippines<br></br><br></br>
-            <b>Hobbies</b>: Programming, Creative Writing, Learning New Things
-          </div>
+              <div className='vertRedLine'>
+                &nbsp;
+              </div>
+
+              <div className='descriptionBesideTitle'>
+                <b>Hi!</b><br></br>My name is RJ Paraiso. I was born in the Philippines but I moved here to
+                Ireland a long time ago. I'm currently in my 2nd year in DCU studying Computer
+                Science. I love programming, web development and solving complex problems.
+                <br></br> I enjoy learning new things and always looking for ways to
+                challenge myself. 
+                {/* "Lorem ipsum d>olor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum." */}
+              </div>
+            </div>
+          }
         </div>
-      </div> */}
+
+      </div>
 
       {/* #### This is the end of the first block  */}
       {/* #### This is the start of the footer  */}
@@ -158,7 +204,7 @@ function App() {
       <footer id="footer">
         <div className='contacts'>
           <b>Email</b>: rjparaiso369@gmail.com<br></br>
-          <b>Phone</b>: (+353) 089 6108 891
+          <b>Phone</b>: (+353)...
         </div>
 
         {/* <div className='other'>
