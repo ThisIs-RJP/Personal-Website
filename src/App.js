@@ -112,11 +112,11 @@ function App() {
             {/* ### This is the first box */}
 
             <div className='sideText'>
-              <p1>
+              <h1>
                 <i>Welcome</i>
-              </p1>
+              </h1>
               <div className='buttonLine'>
-                <div className='cvButton'>
+                {/* <div className='cvButton'>
                   <button
                     className={`animated-button ${isHovered ? 'hovered' : ''}`}
                     onMouseEnter={() => setIsHovered(true)}
@@ -124,9 +124,9 @@ function App() {
                   >
                     My CV
                   </button>
-                </div>
+                </div> */}
 
-                <div className='cvButton'>
+                {/* <div className='cvButton'>
                   <button
                     className={`animated-button ${isHovered2 ? 'hovered' : ''}`}
                     onMouseEnter={() => setIsHovered2(true)}
@@ -134,19 +134,21 @@ function App() {
                   >
                     Websites
                   </button>
-                </div>
+                </div> */}
 
-                <div className='cvButton'>
-                  <a href="https://github.com/ThisIs-RJP?tab=repositories">
-                    <button
-                      className={`animated-button ${isHovered3 ? 'hovered' : ''}`}
-                      onMouseEnter={() => setIsHovered3(true)}
-                      onMouseLeave={() => setIsHovered3(false)}
-                    >
-                      Projects
-                    </button>
-                  </a>
-                </div>
+                <a href="https://github.com/thisIs-RJP/">
+                  <div className='cvButton'>
+                    <a href="https://github.com/ThisIs-RJP?tab=repositories">
+                      <button
+                        className={`animated-button ${isHovered3 ? 'hovered' : ''}`}
+                        onMouseEnter={() => setIsHovered3(true)}
+                        onMouseLeave={() => setIsHovered3(false)}
+                      >
+                        Projects
+                      </button>
+                    </a>
+                  </div>
+                </a>
               </div>
 
               <div className='description'>
