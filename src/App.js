@@ -51,7 +51,7 @@ function App() {
         <div class="navbar">
           <img src={joker} className='icon' />
           <span id="namePlace"><b>RJ Paraiso</b></span>
-          <span id="type"> /&nbsp;&nbsp; Programmer /&nbsp;&nbsp; Front-end Developer</span>
+          <span id="type"> /&nbsp;&nbsp; DevOps Engineer /&nbsp;&nbsp; Front-end Developer</span>
 
           <div className='navBoxBox'>
             <div id="moreContents">
@@ -89,7 +89,7 @@ function App() {
               <span id='namePlace2'>RJ Paraiso</span>
               <div id='redLine'></div>
               <div className='profileStuff'>
-                Programmer<br></br>Front-End Developer
+                DevOps Engineer<br></br>Front-End Developer
               </div>
 
               <div className='socials'>
@@ -187,11 +187,16 @@ function App() {
                 </div>
 
                 <div className='descriptionBesideTitle'>
-                  <b>Hi!</b><br></br>My name is RJ Paraiso. I was born in the Philippines but I moved here to
-                  Ireland a long time ago. I'm currently in my 2nd year in DCU studying Computer
-                  Science. I love programming, web development and solving complex problems.
-                  <br></br> I enjoy learning new things and always looking for ways to
-                  challenge myself.
+                  <b>RJ Paraiso | DevOps, Platform Service Engineer</b><br /><br />
+
+                  Hi! My name is RJ and I am currently in my 3rd year of college studying Computer Science.
+                  <br />
+                  I love programming and learning new things. I particularly like web development, however, I enjoy most things programming related.
+                  <br />
+                  Feel free to contact me using my contacts below, or using my socials on my card above.
+                  <br />
+                  <br />
+                  <b>Email - </b> rjparaiso369@gmail.com
                 </div>
               </div>
             }
