@@ -145,6 +145,64 @@
 /* ####################################### End of the navigation bar */
 /* ####################################### Start of profile background */
 
+.firstBlock {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  margin-top: -100vh;
+  overflow-x: hidden;
+
+  /* background-color: blue; */
+}
+
+.profileBox {
+  width: 45vw;
+  height: 65vh;
+
+  /* background-color: red; */
+  margin-top: 5%;
+  margin-left: 5vw;
+  display: flex;
+
+  opacity: 0;
+  animation: 1s forwards moveCard;
+  animation-delay: 1s;
+}
+
+@keyframes moveCard {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.profileCard {
+  width: 40%;
+  height: 100%;
+
+  background-color: #222222;
+}
+
+.profileInfo {
+  width: 60%;
+  height: 100%;
+
+  /* background-color: purple; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sideName {
   margin-left: -70%;
   /* margin-right: 30%; */
@@ -234,11 +292,11 @@
 
 .sideText {
   color: white;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 #namePlace2 {
-  margin-top: 50px;
+  margin-top: 25px;
   font-weight: bold;
 }
 
@@ -330,16 +388,22 @@
 
 /* ####################################### Start of first block*/
 
+/* .profileCard1 {
+  background-color: red;
+} */
+
 .containerContainer {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  /* background-color: red; */
 }
 
 .backGroundBlock1 {
   height: 100vh;
   overflow: hidden;
+
+  /* background-color: red; */
+  background-color: #141414;
 }
 
 .backgroundBlock2 {
@@ -550,7 +614,7 @@
     /* display: flex; */
     width: 100%;
     height: 800px;
-    background-color: purple;
+    /* background-color: purple; */
   }
 
   .backgroundHalf {
