@@ -69,21 +69,16 @@ function App() {
         </div>
       </div>
 
-      {/* ### THIS IS THE END OF MY NAVIGATION BAR ------------------------ */}
-      <div className='containerContainer'>
-        <div id="profileProfile">
-          <div className='profileBackground'>
-            <div className='backgroundHalf'>
-            </div>
-            <div className='backgroundHalf2'>
-            </div>
-          </div>
+      <div className='profileBackground'>
+        <div className='backgroundHalf'>
+        </div>
+        <div className='backgroundHalf2'>
+        </div>
+      </div>
 
-          {/* #### This is the Middle Box */}
-          <div className='aboutMe'>
-            {/* <div className='sideName'>
-              RJ Paraiso
-            </div> */}
+      <div className="firstBlock">
+        <div className="profileBox">
+          <div className='profileCard'>
             <div className='meBox'>
               <img src={pfp} id="meIcon" />
               <span id='namePlace2'>RJ Paraiso</span>
@@ -106,63 +101,49 @@ function App() {
                   <img src={spotify} className='icons' />
                 </a>
               </div>
-
             </div>
+          </div>
 
-            {/* ### This is the first box */}
+          <div className="profileInfo">
+            <div>
+              <div className='sideText'>
+                    <h1>
+                      <i>Welcome</i>
+                    </h1>
+                    <div className='buttonLine'>
+                      <a href="https://github.com/thisIs-RJP/">
+                        <div className='cvButton'>
+                          <a href="https://github.com/ThisIs-RJP?tab=repositories">
+                            <button
+                              className={`animated-button ${isHovered3 ? 'hovered' : ''}`}
+                              onMouseEnter={() => setIsHovered3(true)}
+                              onMouseLeave={() => setIsHovered3(false)}
+                            >
+                              Projects
+                            </button>
+                          </a>
+                        </div>
+                      </a>
+                    </div>
 
-            <div className='sideText'>
-              <h1>
-                <i>Welcome</i>
-              </h1>
-              <div className='buttonLine'>
-                {/* <div className='cvButton'>
-                  <button
-                    className={`animated-button ${isHovered ? 'hovered' : ''}`}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                  >
-                    My CV
-                  </button>
-                </div> */}
-
-                {/* <div className='cvButton'>
-                  <button
-                    className={`animated-button ${isHovered2 ? 'hovered' : ''}`}
-                    onMouseEnter={() => setIsHovered2(true)}
-                    onMouseLeave={() => setIsHovered2(false)}
-                  >
-                    Websites
-                  </button>
-                </div> */}
-
-                <a href="https://github.com/thisIs-RJP/">
-                  <div className='cvButton'>
-                    <a href="https://github.com/ThisIs-RJP?tab=repositories">
-                      <button
-                        className={`animated-button ${isHovered3 ? 'hovered' : ''}`}
-                        onMouseEnter={() => setIsHovered3(true)}
-                        onMouseLeave={() => setIsHovered3(false)}
-                      >
-                        Projects
-                      </button>
-                    </a>
-                  </div>
-                </a>
-              </div>
-
-              <div className='description'>
-                {/* Hi!<br></br> My name is RJ.<br></br> */}
-                <div className='leftLine'>
-                  Welcome to my website. Please use the elements
-                  provided to navigate through it.
-                  <br></br>
-
+                    <div className='description'>
+                      {/* Hi!<br></br> My name is RJ.<br></br> */}
+                      <div className='leftLine'>
+                        Welcome to my website. Please use the elements
+                        provided to navigate through it.
+                        <br></br>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
+      </div>
+
+      {/* ### THIS IS THE END OF MY NAVIGATION BAR ------------------------ */}
+      <div className='containerContainer'>
+
+
         {/* #### This is the end of the Middle Box */}
 
         <div className='buffer1'></div>
