@@ -1,559 +1,178 @@
-.App {
-  background-color: #222222;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #222222;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #353535;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #2b2b2b;
-}
-
-/* ##### Buffers  */
-
-.buffer1 {
-  height: 2px;
-  background-color: #0a0a0a;
-}
-
-/* ####################################### Start of navigation bar code */
-
-.navBoxBox {
+.desktop-main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(28, 28, 28);
+  
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-left: 20%;
-  font-size: 80%;
-}
-
-.fixedWrapper {
-  z-index: 2;
-  width: 100%;
-  position: fixed;
-}
-
-.navbar {
-  padding-left: 2%;
-  display: flex;
-  align-items: center;
-  font-size: 100%;
-  color: rgb(228, 228, 228);
-  background-color: #222222;
-  /* background-color: red; */
-  width: 100%;
-  height: 5vh;
-  padding-top: 50px;
-  margin-top: -30px;
-  padding-bottom: 20px;
-  margin-bottom: 0px;
-  animation: animateNavBar 2s forwards;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  padding-right: 20px;
-}
-
-#namePlace {
-  font-weight: bold;
-}
-
-.details {
-  /* background-color: green; */
-
-  margin-left: 1%;
-}
-
-#type {
-  margin-left: 20px;
-  font-size: 80%;
-}
-
-#contents {
-  text-align: left;
-  font-size: 80%;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: 0px;
-}
-
-.links {
-  display: inline-block;
+  
   position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  /* color: white; */
-  color: blue;
+  z-index: -2;
 }
 
-.links:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #bb000e;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+.main-box {
+  width: 98vw;
+  height: 98vh;
+  border: 1vw solid rgb(28, 28, 28);
+  /* background-color: rgb(32, 32, 32); */
 
-.links:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+  position: relative;
+  z-index: -2;
 
-#moreContents {
-  display: flex;
-  justify-content: center;
-  /* background-color: red; */
-  text-align: center;
-  align-items: center;
-
-  color: blue;
-}
-
-/* .links:hover {
-  text-decoration: underline;
-  color: #bb000e;
-} */
-
-/* ######################################## Animation goes here */
-
-@keyframes animateNavBar {
-  0% {
-    transform: translateY(-50px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* ####################################### End of the navigation bar */
-/* ####################################### Start of profile background */
-
-.firstBlock {
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-
-  margin-top: -100vh;
-  overflow-x: hidden;
+  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.profileBox {
-  width: 45vw;
-  height: 65vh;
-
-  /* background-color: red; */
-  margin-top: 5%;
-  margin-left: 5vw;
-  display: flex;
-
-  opacity: 0;
-  animation: 1s forwards moveCard;
-  animation-delay: 1s;
-}
-
-@keyframes moveCard {
-  0% {
-    transform: translateX(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.profile-card {
-  width: 60%;
-  height: 100%;
-
-  /* background-color: #222222; */
-}
-
-.profile-info {
-  width: 60%;
-  height: 100%;
-
-  margin-left: 10%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-
-  animation: animateInBox 1s forwards;
-  animation-delay: 1.8s;
-
-}
-
-.profile-card-container {
-  width: 40%;
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-
-}
-
-.sideName {
-  margin-left: -70%;
-  /* margin-right: 30%; */
-  color: #bb000e;
-  font-size: 200%;
-  font-weight: bolder;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  rotate: 270deg;
-}
-
-#profileProfile {
-  display: flex;
-  width: 100%;
-}
-
-.profileBackground {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-.backgroundHalf {
-  width: 50%;
-  /* height: 80vh; */
-  height: 100%;
-  background-color: #161616;
-  animation: backgroundIn1 1s forwards;
-}
-
-.backgroundHalf2 {
+.left-box {
   width: 20%;
-  /* height: 80vh; */
   height: 100%;
-  background-color: #1c1c1c;
-  animation: backgroundIn2 1s forwards;
-  overflow-x: hidden;
-}
 
-.buttonLine {
-  display: flex;
-}
-
-.aboutMe {
-  position: absolute;
-  /* margin-left: 50%; */
-  opacity: 0;
-  top: 20%;
-  left: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: animateInBox 2s forwards;
-  animation-delay: 2s;
-}
-
-.me-box {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  /* Change to relative position */
   z-index: 1;
-  /* Ensure the z-index is higher than the backgrounds */
-  background-color: #222222;
-  /* background-color: red; */
-  color: white;
-  font-size: 130%;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+
+  background-color: rgb(30, 30, 30);
+  /* background-color: blue; */
 
   opacity: 0;
 
-  animation: 1s animateInBox forwards;
-  animation-delay: 1.5s;
-  width: 70%;
-}
-
-#meIcon {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-.icons {
-  margin-top: 20px;
-  padding-left: 10px;
-  height: 25px;
-  width: 25px;
-}
-
-.sideText {
-  color: white;
-  /* margin-left: 30px; */
-}
-
-#namePlace2 {
-  margin-top: 25px;
-  font-weight: bold;
-}
-
-#redLine {
-  margin-top: 20px;
-  height: 3px;
-  width: 150px;
-  background-color: #bb000e;
-}
-
-.profileStuff {
-  margin-top: 20px;
-}
-
-.description {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 130%;
-  width: 300px;
-}
-
-.container {
-  display: flex;
-}
-
-.leftLine {
-  margin-top: 5%;
-  border-left: #bb000e solid 2px;
-  width: 300px;
-  align-items: center;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-}
-
-/* ######################################## Animation goes here */
-
-.animated-button {
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  background-color: none;
-  color: white;
-  background-color: #bb000e;
-  border-radius: 30px;
-  border: none;
-  width: 100px;
-  height: 40px;
-  font-size: 110%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.animated-button.hovered {
-  transform: scale(1.1);
-  background-color: #222222;
-}
-
-@keyframes animateInBox {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes backgroundIn1 {
-  0% {
-    width: 0%
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-@keyframes backgroundIn2 {
-  0% {
-    width: 20%
-  }
-
-  100% {
-    width: 50%;
-  }
-}
-
-/* ####################################### Start of first block*/
-
-.containerContainer {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.backGroundBlock1 {
-  height: 100vh;
   overflow: hidden;
+  animation: 1s reveal-left-box forwards;
+  animation-delay: 0.2s;
+}
 
-  color: white;
+@keyframes reveal-left-box {
+  from {
+    opacity: 0;
+    transform: translateX(65%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.right-box {
+  width: 80%;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  background-color: rgb(32, 32, 32);
+  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.left-box-gap {
+  width: 100%;
+  height: 10%;
+
+  /* background-color: yellow; */
+}
+
+.tab-box {
+  margin-left: 1.5vw;
+
+  width: 80%;
+  height: 5%;
 
   /* background-color: red; */
-  background-color: #141414;
 }
 
-.backgroundBlock2 {
-  overflow: hidden;
+.tab-box img {
+  height: 100%;
+  width: auto;
+
+  opacity: 100%;
+
+  background-color: rgb(35, 35, 35);
 }
 
-.block1 {
+.left-box-content-box {
+  width: 100%;
+  height: 85%;
+
+  background-color: rgb(35, 35, 35);
+}
+
+.left-box-content-box-gap {
+  width: 100%;
+  height: 4%;
+
+  /* background-color: yellow; */
+  display: flex;
   justify-content: center;
-  width: 100%;
-  /* background-color: #141414; */
   align-items: center;
-  padding-bottom: 20%;
 }
 
-#id block1Column {
+.left-box-title-box {
   width: 100%;
-}
+  height: 20%;
 
-.title {
-  padding-top: 10%;
-  font-size: 500%;
-  font-weight: bold;
-  width: 30%;
-  font-family: 'Roboto', sans-serif;
-  color: #bb000e;
+  /* background-color: red; */
 
-  margin-left: -10vw;
-  /* border-right: #bb000e 2px solid; */
-  /* color: white; */
-}
+  display: flex;
+  justify-content: left;
+  align-items: center;
 
-.rotateTitle {
-  animation: rotateTitle 0.5s forwards;
   font-size: 200%;
-  margin-left: 20%;
+  font-weight: 550;
 
-  opacity: 0;
-
-  animation-delay: 0.5s;
+  color: rgb(238, 238, 238);
 }
 
-.containerTitle {
+.left-box-photo-box {
+  width: 100%;
+  height: 50%;
+
+  /* background-color: red; */
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.vertRedLine {
-  margin-top: 10%;
-  height: 0px;
-  border-right: #bb000e 2px solid;
-  align-items: center;
-  animation: lineDown 1s forwards;
-  margin-left: -70%;
+.left-box-photo-box img {
+  width: 75%;
+
+  border-radius: 5%;
 }
 
-.descriptionBesideTitle {
-  opacity: 0;
-  margin-top: 11%;
-  padding-left: 5%;
-  color: white;
-  font-size: 150%;
-  width: 50%;
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
+.red-line {
+  width: 40%;
+  height: 1px;
+
+  background-color: red;
 }
 
-/* ######################################## Animation goes here */
+.left-box-short-desc-box {
+  width: 100%;
+  height: 15%;
 
-@keyframes rotateTitle {
-  0% {
-    opacity: 0;
-    transform: rotate(30deg);
-    transform-origin: 0% 0%;
-  }
+  /* background-color: blue; */
 
-  100% {
-    opacity: 1;
-    transform: rotate(0deg);
-    transform-origin: 0% 0%;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-
-  }
-}
-
-@keyframes lineDown {
-  0% {
-    height: 0px;
-  }
-
-  100% {
-    height: 250px;
-  }
-}
-
-/* ####################################### End of first block*/
-/* ####################################### Start of the footer*/
-
-#footer {
-  font-size: 110%;
-  padding-top: 1%;
-  margin-bottom: 1%;
   display: flex;
   justify-content: center;
-  z-index: 100;
-  background-color: #222222;
+  align-items: center;
+}
+
+.left-box-short-desc-box div {
+  width: 75%;
+  height: 90%;
+
+  font-weight: 300;
+
   color: white;
-  padding-bottom: 3%;
-}
 
-.contacts {
-  padding-right: 50%;
+  /* background-color: yellow; */
 }
-
-/* ####################################### End of the footer*/
