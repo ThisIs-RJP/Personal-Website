@@ -1,0 +1,427 @@
+
+
+/* ################################## Mobile View ###### */
+
+.App {
+  width: 100%;
+  top: 0;
+  background-color: #1c1c1c;
+}
+
+/* ####################################### Start of navigation bar code */
+
+.navBoxBox-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* margin-left: 20%; */
+  font-size: 80%;
+}
+
+.fixedWrapper-mobile {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+}
+
+.navbar-mobile {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 80%;
+  color: rgb(228, 228, 228);
+  background-color: #222222;
+  /* background-color: red; */
+  width: 100%;
+  height: 5vh;
+  animation: animateNavBar 2s forwards;
+}
+
+.details-mobile {
+  width: 50vw;
+}
+
+.containerContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ####################################### Start of navigation bar code */
+ul {
+  width: 100%;
+  margin-left: -5%;
+  display: block;
+  flex-direction: row;
+  font-size: 90%;
+  color: rgb(228, 228, 228);
+  /* background-color: #1c1c1c; */
+  background-color: #1c1c1c;
+  padding-top: 50px;
+  margin-top: -5%;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.icon-mobile {
+  width: 40px;
+  height: 40px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#namePlace-mobile {
+  font-weight: bold;
+}
+
+.type-mobile {
+  margin-left: 2%;
+  width: 100%;
+  font-size: 80%;
+}
+
+
+#contents {
+  text-align: right;
+  font-size: 80%;
+  margin-top: 15px;
+  /* margin-left: auto; */
+  /* margin-right: 30px; */
+}
+
+.links {
+  padding-left: 10px;
+  /* padding-right: 10px; */
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  text-decoration: underline;
+  color: #bb000e;
+}
+
+/* ####################################### End of the navigation bar */
+/* ####################################### Start of profile background */
+
+#profileProfile {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.profile-background-mobile {
+  /* display: flex; */
+  width: 100vw;
+  height: 100vh;
+}
+
+.backgroundHalf {
+  width: 50%;
+  /* height: 80vh; */
+  height: 100%;
+  /* background-color: #12151c; */
+}
+
+.backgroundHalf2 {
+  width: 50%;
+  /* height: 80vh; */
+  height: 100%;
+  /* background-color: #1b222c; */
+}
+
+.aboutMe {
+  position: absolute;
+  margin-left: 0%;
+  top: 20%;
+  left: 30%;
+  right: 30%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+#me-icon-mobile {
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+}
+
+.icons {
+  margin-top: 20px;
+  padding-left: 10px;
+  height: 10%;
+  width: 10%;
+}
+
+.side-text-mobile {
+  color: white;
+  width: 100vw;
+  height: 90%;
+}
+
+.side-text-mobile p1 {
+  font-size: 200%;
+}
+
+.button-line-mobile {
+  margin-top: 2%;
+}
+
+#namePlace2 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+#redLine {
+  margin-top: 20px;
+  height: 3px;
+  width: 60%;
+  background-color: #bb000e;
+}
+
+.profileStuff {
+  margin-top: 20px;
+}
+
+.left-line-mobile {
+  margin-top: 3%;
+  padding-left: 3%;
+  border-left: 2px solid red;
+  width: 70%;
+  height: 150%;
+  /* background-color: purple; */
+}
+
+/* ######################################## Animation goes here */
+
+.animated-button {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  background-color: none;
+  color: white;
+  background-color: #bb000e;
+  border-radius: 30px;
+  border: none;
+  width: 80px;
+  height: 40px;
+  font-size: 80%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.animated-button.hovered {
+  transform: scale(1.1);
+  background-color: #222222;
+}
+
+/* ####################################### Start of first block*/
+
+.first-block-mobile {
+  margin-top: -95vh;
+
+  height: 95vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card-container-mobile {
+  width: 70vw;
+  height: 65vh;
+  background-color: #222222;
+  /* background-color: red; */
+
+  padding: 5%;
+  overflow: hidden;
+
+  opacity: 0;
+
+  animation: reveal-mobile-card 1.5s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes reveal-mobile-card {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.profile-info-mobile {
+  width: 100%;
+  height: 40%;
+}
+
+.me-box-mobile {
+  position: relative;
+  z-index: 2;
+  /* Ensure the z-index is higher than the backgrounds */
+  /* background-color: #1c1c1c; */
+  /* background-color: green; */
+  color: white;
+  font-size: 100%;
+  text-align: center;
+
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#block1 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  color: black;
+  width: 100%;
+}
+
+#id block1Column {
+  width: 100%;
+}
+
+.title-mobile {
+  font-size: 50%;
+  font-weight: bold;
+  margin-right: 20%;
+  width: 100%;
+  height: 10vh;
+
+  color: red;
+  animation: removeTitle 0.5s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes removeTitle {
+  0% {
+    height: 10vh;
+  }
+
+  100% {
+    height: 0vh;
+  }
+}
+
+.rotate-title-mobile {
+  font-size: 500%;
+
+  animation: rotate-title-mobile 1.5s forwards;
+}
+
+@keyframes rotate-title-mobile {
+  0% {
+    opacity: 0;
+    transform: rotate(30deg);
+    transform-origin: 0% 0%;
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: 0% 0%;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100%)
+  }
+}
+
+.descUnderTitle {
+  margin-top: 5%;
+  font-size: 110%;
+  width: 70%;
+  word-spacing: 2px;
+}
+
+/* ####################################### End of first block*/
+/* ####################################### Start of the footer*/
+
+#footer {
+  font-size: 80%;
+  margin-top: 0%;
+  /* margin-bottom: 1%; */
+  display: flex;
+  justify-content: center;
+}
+
+.contacts {
+  padding-right: 0%;
+}
+
+.description-two-mobile {
+  width: 80vw;
+  height: 0;
+  opacity: 0;
+  /* height: 80vh; */
+
+  /* background-color: navy; */
+  /* background-color: green; */
+
+  animation: extend-description-mobile 0.5s forwards;
+  animation-delay: 1.5s;
+
+  font-size: 130%;
+  color: white;
+}
+
+.description-two-text-mobile {
+  opacity: 0;
+  animation: reveal-text-mobile 1s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes reveal-text-mobile {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes extend-description-mobile {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+
+.container-container-mobile {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-block-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.buffer-mobile {
+  height: 2px;
+  background-color: #0a0a0a;
+}
