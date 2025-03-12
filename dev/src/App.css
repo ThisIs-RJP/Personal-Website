@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+a {
+  color: red;
+  text-decoration: none;
+  font-weight: 550;
+
+  position: relative;
+  z-index: 10;
+}
+
+a:hover {
+  color: rgb(255, 102, 0);
+}
 
 .desktop-main {
   width: 100vw;
@@ -60,17 +72,6 @@
     opacity: 1;
     transform: translateX(0%);
   }
-}
-
-.right-box {
-  width: 80%;
-  height: 100%;
-
-  position: relative;
-  z-index: 1;
-
-  background-color: rgb(32, 32, 32);
-  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .left-box-gap {
@@ -175,4 +176,59 @@
   color: white;
 
   /* background-color: yellow; */
+}
+
+
+.right-box {
+  width: 80%;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  background-color: rgb(32, 32, 32);
+  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-box-inner {
+  width: 85%;
+  height: 85%;
+
+  /* background-color: white; */
+}
+
+.right-box-top-box {
+  width: 100%;
+  height: 65%;
+
+  /* background-color: orange; */
+
+  display: flex;
+
+  color: rgb(92, 92, 92);
+}
+
+.right-box-top-box div {
+  width: 40%;
+  height: 100%;
+
+  padding: 2%;
+
+  /* background-color: yellow; */
+}
+
+.right-box-top-box p1 {
+  color: white;
+}
+
+.right-box-top-box p2 {
+  color: red;
+}
+
+.right-box-top-box span {
+  color: white;
 }

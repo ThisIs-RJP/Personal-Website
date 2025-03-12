@@ -65,6 +65,32 @@ function App() {
 
 
         <div className='right-box'>
+          <div className="right-box-inner">
+            <div className="right-box-top-box">
+              <div>
+                <h1>
+                  About Me
+                </h1>
+                <br />
+                <p1>
+                  I'm a 20 year old developer from the Philippines, and I am currently studying Computer Science.
+                  Despite being a Junior DevOps Engineer, I have a passion for Web Development, and Front End designing. 
+                </p1>
+                <br />
+                <br />
+                <p2>
+                  <span>
+                    Check out my repositories &nbsp;
+                  </span>
+                  <a href="https://github.com/thisis-rjp">
+                    here!
+                  </a>
+                </p2>
+              </div>
+            </div>
+
+
+          </div>
         </div>
         
       </div>
